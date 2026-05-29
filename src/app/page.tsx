@@ -138,6 +138,7 @@ const footerGroups = [
 export default function Home() {
   return (
     <main className="n7-page">
+      <div className="scroll-progress" aria-hidden="true" />
       <Header />
       <HeroSection />
       <SolutionsSection />
