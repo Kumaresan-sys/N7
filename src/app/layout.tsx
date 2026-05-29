@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Archivo, Chivo_Mono, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import LenisProvider from "./LenisProvider";
+import RevealObserver from "./RevealObserver";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,8 +27,7 @@ const archivo = Archivo({
 
 export const metadata: Metadata = {
   title: "N7 | Modern Banking Foundation",
-  description:
-    "A responsive N7 landing page for modern digital banking infrastructure.",
+  description: "A responsive N7 landing page for modern digital banking infrastructure.",
 };
 
 export default function RootLayout({
@@ -39,7 +40,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${chivoMono.variable} ${archivo.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <LenisProvider>
+          <RevealObserver />
+          {children}
+        </LenisProvider>
+      </body>
     </html>
   );
 }

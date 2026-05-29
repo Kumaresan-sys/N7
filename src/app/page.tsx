@@ -161,6 +161,7 @@ function Header() {
       <a className="brand" href="#" aria-label="N7 home">
         N7
       </a>
+      <input type="checkbox" id="nav-toggle" className="sr-only" />
       <nav className="nav-links" aria-label="Main menu">
         <a className="has-dropdown" href="#solutions">
           Solutions
@@ -175,9 +176,9 @@ function Header() {
       <a className="header-demo" href="#contact">
         Request demo
       </a>
-      <button className="menu-button" type="button" aria-label="Open menu">
+      <label htmlFor="nav-toggle" className="menu-button" aria-label="Open menu">
         <Menu size={18} />
-      </button>
+      </label>
     </header>
   );
 }
