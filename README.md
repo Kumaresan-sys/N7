@@ -96,7 +96,3 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 4. **Deploy**: Click the "Deploy" button. Vercel will build and deploy your application.
 
 Once deployed, you will get a live URL where your application is hosted. Subsequent pushes to your main branch will automatically trigger new deployments on Vercel.
-
-## Styling Approach
-
-The project uses modular CSS files aggregated in `globals.css` rather than inline Tailwind classes for complex components. This keeps the JSX clean while maintaining the high-fidelity design aesthetics required for the landing page.
