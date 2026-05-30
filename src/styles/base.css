@@ -19,7 +19,7 @@
   --violet: #9074ff;
   --radius: 8px;
   --shell: min(1340px, calc(100vw - 96px));
-  --section-dark-bg: linear-gradient(90deg, transparent 0%, transparent 47%, rgba(0, 170, 255, 0.07) 47%, rgba(0, 170, 255, 0.07) 47.1%, transparent 47.1%), radial-gradient(circle at 15% 80%, transparent 0, transparent 13rem, rgba(0, 170, 255, 0.08) 13.05rem, rgba(0, 170, 255, 0.08) 13.12rem, transparent 13.2rem), radial-gradient(circle at 86% 30%, transparent 0, transparent 16rem, rgba(0, 118, 255, 0.08) 16.05rem, rgba(0, 118, 255, 0.08) 16.12rem, transparent 16.2rem);
+  --section-dark-bg: none;
 }
 
 * {
