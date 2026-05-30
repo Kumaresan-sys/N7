@@ -44,22 +44,58 @@ src/
 - Lenis (Smooth scrolling)
 - lucide-react icons
 
-## Setup
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-repo-url>
+cd N7
+```
+
+### 2. Install Dependencies
 
 ```bash
 npm install
+```
+
+### 3. Run the Development Server
+
+```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Commands
+## Available npm Commands
 
-```bash
-npm run lint     # Lint the codebase
-npm run build    # Build for production
-npm run start    # Start production server
-```
+Here is a list of all available npm scripts in the project:
+
+- **`npm run dev`**: Starts the Next.js development server on `localhost:3000` with hot-module replacement.
+- **`npm run build`**: Creates an optimized production build of your application.
+- **`npm run start`**: Starts a Node.js server to serve your built application in production mode.
+- **`npm run lint`**: Runs ESLint to catch and report potential issues in the codebase.
+
+## Vercel Deployment
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new) from the creators of Next.js.
+
+### Steps to Deploy:
+
+1. **Push your code to a Git provider**: Push your repository to GitHub, GitLab, or Bitbucket.
+2. **Import your project on Vercel**: 
+   - Sign up or log in to [Vercel](https://vercel.com/).
+   - Click on "Add New..." and select "Project".
+   - Import your Git repository.
+3. **Configure Project Settings**:
+   - Vercel will automatically detect that you are using Next.js and configure the build settings accordingly:
+     - **Framework Preset**: Next.js
+     - **Build Command**: `npm run build`
+     - **Output Directory**: `.next`
+   - If you have any environment variables, add them in the "Environment Variables" section.
+4. **Deploy**: Click the "Deploy" button. Vercel will build and deploy your application.
+
+Once deployed, you will get a live URL where your application is hosted. Subsequent pushes to your main branch will automatically trigger new deployments on Vercel.
 
 ## Styling Approach
 
