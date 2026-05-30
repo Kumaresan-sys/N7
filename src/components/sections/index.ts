@@ -1,0 +1,10 @@
+export { default as HeroSection } from "./HeroSection";
+export { default as SolutionsSection } from "./SolutionsSection";
+export { default as CoreBankingSection } from "./CoreBankingSection";
+export { default as CoreEfficiencySection } from "./CoreEfficiencySection";
+export { default as CtaSection } from "./CtaSection";
+export { default as MarqueeStrip } from "./MarqueeStrip";
+export { default as DigitalBankingSection } from "./DigitalBankingSection";
+export { default as InsightsSection } from "./InsightsSection";
+export { default as CaseStudiesSection } from "./CaseStudiesSection";
+export { default as FinalCtaSection } from "./FinalCtaSection";

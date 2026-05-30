@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { useMagneticCursor } from "./useMagneticCursor";
+import { useMagneticCursor } from "@/lib/hooks";
 
 export default function HeroAnimations() {
   const heroRef = useRef<HTMLElement>(null);
@@ -20,7 +20,6 @@ export default function HeroAnimations() {
 
     const hero = document.querySelector(".hero") as HTMLElement;
     if (hero) {
-      // @ts-ignore - store ref for useMagneticCursor
       heroRef.current = hero;
     }
 

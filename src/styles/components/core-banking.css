@@ -1,0 +1,114 @@
+.core {
+  min-height: 492px;
+  padding: 46px 0 37px;
+  overflow: hidden;
+}
+
+.core-shell {
+  grid-template-columns: minmax(360px, 0.78fr) minmax(503px, 1.22fr);
+  gap: clamp(44px, 6vw, 110px);
+  align-items: center;
+  min-height: 409px;
+}
+
+.core-shell::before,
+.cta-card::after {
+  position: absolute;
+  pointer-events: none;
+  content: "B7";
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(0, 112, 255, 0.24);
+  font-size: clamp(180px, 24vw, 360px);
+  font-weight: 500;
+  line-height: 0.7;
+}
+
+.core-shell::before {
+  content: "CB7";
+  left: -108px;
+  top: 7px;
+  -webkit-text-stroke-color: rgba(0, 112, 255, 0.2);
+  font-size: clamp(240px, 30vw, 430px);
+}
+
+.core-title {
+  position: relative;
+  z-index: 1;
+  align-self: start;
+  max-width: 620px;
+  padding-top: 64px;
+}
+
+.core-title h2 {
+  max-width: 620px;
+  margin-bottom: 18px;
+  font-size: clamp(34px, 3.2vw, 42px);
+  font-weight: 400;
+  line-height: 1.18;
+}
+
+.core-title h2 span {
+  display: block;
+  white-space: nowrap;
+}
+
+.core-title p {
+  max-width: 330px;
+  margin-bottom: 28px;
+  color: var(--muted-strong);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.core-title .button.small {
+  min-width: 168px;
+  min-height: 40px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.core-title .text-link {
+  display: flex;
+  width: fit-content;
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+.core-dashboard-frame {
+  position: relative;
+  z-index: 2;
+  justify-self: end;
+  width: min(632px, 58vw);
+  margin-right: calc(-1 * (((100vw - var(--shell)) / 2) + 64px));
+  padding: 5px 0 0 5px;
+  border: 1px solid rgba(2, 169, 255, 0.9);
+  border-right: 0;
+  border-bottom: 0;
+  border-radius: 8px 0 0 0;
+  background: rgba(0, 13, 18, 0.42);
+  box-shadow: 0 26px 90px rgba(0, 68, 142, 0.18);
+  overflow: visible;
+}
+
+.core-dashboard-frame::after {
+  position: absolute;
+  right: -360px;
+  bottom: -22px;
+  left: -68px;
+  height: 22px;
+  border: 1px solid rgba(2, 169, 255, 0.9);
+  border-right: 0;
+  border-radius: 8px 0 0 8px;
+  content: "";
+}
+
+.core-dashboard-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}

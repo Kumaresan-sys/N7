@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo, Chivo_Mono, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import LenisProvider from "./LenisProvider";
-import RevealObserver from "./RevealObserver";
+import { LenisProvider } from "@/lib/providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,12 +24,12 @@ const archivo = Archivo({
   subsets: ["latin"],
 });
 
-import ScrollAnimations from "./animations/ScrollAnimations";
-import HeroAnimations from "./animations/HeroAnimations";
+import { ScrollAnimations, HeroAnimations } from "@/lib/animations";
+import { siteConfig } from "@/data/site-config";
 
 export const metadata: Metadata = {
-  title: "N7 | Modern Banking Foundation",
-  description: "A responsive N7 landing page for modern digital banking infrastructure.",
+  title: siteConfig.title,
+  description: siteConfig.description,
 };
 
 export default function RootLayout({

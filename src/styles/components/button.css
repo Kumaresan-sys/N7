@@ -1,0 +1,81 @@
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+  margin-top: 34px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 170px;
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button.primary {
+  border: 1px solid var(--blue);
+  color: white;
+  background: linear-gradient(110deg, var(--blue), var(--blue-deep));
+  box-shadow: 0 16px 35px rgba(0, 132, 255, 0.28);
+}
+
+.button.ghost {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.button.ghost:hover {
+  border-color: var(--blue);
+  background: rgba(2, 169, 255, 0.08);
+}
+
+.button.small {
+  min-width: 138px;
+  min-height: 42px;
+  padding-inline: 18px;
+}
+
+.hero .button {
+  min-width: 170px;
+  min-height: 50px;
+  padding-inline: 24px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.text-link {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: gap 180ms ease;
+}
+
+.text-link:hover {
+  gap: 12px;
+}
+
+.text-link.dark {
+  color: var(--blue-deep);
+}

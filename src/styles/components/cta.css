@@ -1,0 +1,97 @@
+.cta-section {
+  position: relative;
+  padding: 34px 0 96px;
+  background: var(--bg);
+}
+
+.cta-section .shell {
+  width: min(1280px, calc(100vw - 160px));
+}
+
+.cta-section.compact {
+  padding: 48px 0 86px;
+  background: var(--light);
+  overflow: hidden;
+}
+
+.cta-section.compact::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background-image: url("/assets/digital-figma-lines.svg");
+  background-repeat: no-repeat;
+  background-position: center -1670px;
+  background-size: min(1440px, 112vw) auto;
+}
+
+.cta-section.compact .shell {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 620px) minmax(430px, 456px);
+  gap: clamp(54px, 5vw, 72px);
+  align-items: center;
+  justify-content: space-between;
+  min-height: 427px;
+  padding: 0 66px;
+  border: 1px solid rgba(44, 207, 255, 0.28);
+  border-radius: 8px;
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(56, 151, 190, 0.32), transparent 41%),
+    radial-gradient(ellipse at 34% 74%, rgba(0, 58, 74, 0.28), transparent 34%),
+    linear-gradient(135deg, rgba(9, 43, 51, 0.98), rgba(0, 13, 18, 0.98));
+  overflow: hidden;
+}
+
+.cta-card::after {
+  content: "CB7";
+  right: -52px;
+  top: 48px;
+  -webkit-text-stroke-color: rgba(0, 112, 255, 0.3);
+  font-size: clamp(320px, 33.5vw, 480px);
+}
+
+.cta-card h2 {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+  margin-bottom: 30px;
+  font-size: clamp(46px, 3.65vw, 54px);
+  font-weight: 400;
+  line-height: 1.16;
+}
+
+.cta-card p,
+.cta-card .button-row {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-card p {
+  max-width: 690px;
+  color: rgba(197, 213, 217, 0.9);
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.cta-card .button-row {
+  flex-wrap: nowrap;
+  justify-self: end;
+  gap: 40px;
+  margin-top: 0;
+}
+
+.cta-card .button {
+  min-width: 208px;
+  min-height: 50px;
+  padding-inline: 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}

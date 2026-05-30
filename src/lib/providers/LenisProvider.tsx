@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useEffect, useRef, ReactNode } from "react";
+import { createContext, useEffect, useState, ReactNode } from "react";
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,7 +14,7 @@ interface LenisProviderProps {
 }
 
 export default function LenisProvider({ children }: LenisProviderProps) {
-  const lenisRef = useRef<Lenis | null>(null);
+  const [lenisInstance, setLenisInstance] = useState<Lenis | null>(null);
 
   useEffect(() => {
     // Respect prefers-reduced-motion
@@ -27,7 +27,8 @@ export default function LenisProvider({ children }: LenisProviderProps) {
       smoothWheel: true,
       wheelMultiplier: 0.9,
     });
-    lenisRef.current = lenis;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setLenisInstance(lenis);
 
     // Sync Lenis scroll position with GSAP ScrollTrigger
     lenis.on("scroll", ScrollTrigger.update);
@@ -42,12 +43,12 @@ export default function LenisProvider({ children }: LenisProviderProps) {
 
     return () => {
       lenis.destroy();
-      lenisRef.current = null;
+      setLenisInstance(null);
     };
   }, []);
 
   return (
-    <LenisContext.Provider value={lenisRef.current}>
+    <LenisContext.Provider value={lenisInstance}>
       {children}
     </LenisContext.Provider>
   );
